@@ -17,7 +17,23 @@ struct LockView<Content: View>: View {
     @ViewBuilder var content: Content
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader {
+            let size = $0.size
+            
+            content
+                .frame(width: size.width, height: size.height)
+            
+            if isEnable {
+                ZStack {
+                    if lockType == .both || lockType == .biometric {
+                        Rectangle()
+                    } else {
+                        // Custom Number Pad to type View Lock Pin
+                    }
+                }
+                .ignoresSafeArea()
+            }
+        }
     }
     
     // Lock Type
