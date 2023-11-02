@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3DBBFE2AF3E6C1006E90D0 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3DBBFD2AF3E6C1006E90D0 /* LockView.swift */; };
 		4ABB856D2AE6C1A600086B9A /* LockSwiftUIViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB856C2AE6C1A600086B9A /* LockSwiftUIViewApp.swift */; };
 		4ABB856F2AE6C1A600086B9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB856E2AE6C1A600086B9A /* ContentView.swift */; };
 		4ABB85712AE6C1A700086B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB85702AE6C1A700086B9A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A3DBBFD2AF3E6C1006E90D0 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		4ABB85692AE6C1A600086B9A /* LockSwiftUIView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockSwiftUIView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ABB856C2AE6C1A600086B9A /* LockSwiftUIViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockSwiftUIViewApp.swift; sourceTree = "<group>"; };
 		4ABB856E2AE6C1A600086B9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A3DBBFC2AF3E6AF006E90D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A3DBBFD2AF3E6C1006E90D0 /* LockView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4ABB85602AE6C1A600086B9A = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		4ABB856B2AE6C1A600086B9A /* LockSwiftUIView */ = {
 			isa = PBXGroup;
 			children = (
+				4A3DBBFC2AF3E6AF006E90D0 /* View */,
 				4ABB856C2AE6C1A600086B9A /* LockSwiftUIViewApp.swift */,
 				4ABB856E2AE6C1A600086B9A /* ContentView.swift */,
 				4ABB85702AE6C1A700086B9A /* Assets.xcassets */,
@@ -139,6 +150,7 @@
 			files = (
 				4ABB856F2AE6C1A600086B9A /* ContentView.swift in Sources */,
 				4ABB856D2AE6C1A600086B9A /* LockSwiftUIViewApp.swift in Sources */,
+				4A3DBBFE2AF3E6C1006E90D0 /* LockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
