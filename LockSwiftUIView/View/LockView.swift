@@ -29,18 +29,55 @@ struct LockView<Content: View>: View {
             content
                 .frame(width: size.width, height: size.height)
             
-            if isEnable && isUnlocked {
+            if isEnable && !isUnlocked {
                 ZStack {
                     Rectangle()
+                        .fill(.black)
                         .ignoresSafeArea()
                     
                     if lockType == .both || lockType == .biometric {
-                        
+                        Group {
+                            if noBiometricAccess {
+                                Text("Enable biometric authentication in Settings to unlock the view.")
+                                    .font(.callout)
+                                    .multilineTextAlignment(.center)
+                                    .padding(50)
+                            } else {
+                                // Bio Metric / Pin Unlock
+                                VStack(spacing: 12) {
+                                    VStack(spacing: 6) {
+                                        Image(systemName: "lock")
+                                            .font(.largeTitle)
+                                        
+                                        Text("Tap to Unlock")
+                                            .font(.caption2)
+                                            .foregroundStyle(.gray)
+                                    }
+                                    .frame(width: 100, height: 100)
+                                    .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
+                                    .contentShape(.rect)
+                                    .onTapGesture {
+                                        
+                                    }
+                                    
+                                    if lockType == .both {
+                                        Text("Enter Pin")
+                                            .frame(width: 100, height: 40)
+                                            .background(.ultraThinMaterial, in: .rect(cornerRadius: 10))
+                                            .contentShape(.rect)
+                                            .onTapGesture {
+                                                
+                                            }
+                                    }
+                                }
+                            }
+                        }
                     } else {
                         // Custom Number Pad to type View Lock Pin
                         numberPadPinView()
                     }
                 }
+                .environment(\.colorScheme, .dark)
                 .transition(.offset(y: size.height + 100))
                 
             }
