@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        LockView(lockType: .both, lockPin: "0320", isEnable: true) {
+        LockView(lockType: .biometric, lockPin: "0320", isEnable: true, lockWhenAppGoesBackground: false) {
             VStack(spacing: 15) {
                 Image(systemName: "globe")
                     .imageScale(.large)
